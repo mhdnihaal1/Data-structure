@@ -53,9 +53,9 @@ class LinkedList{
          //========================To remove duplicates from  the  linkedlist===============
 
      removeduplicate() {
-        let slow = this.head;
+        let slow = this.head; 
         
-        while (slow !== null && slow.next !== null) {
+        while ( slow.next !== null) {
             let fast = slow;
             while (fast.next !== null) {
                 if (slow.value === fast.next.value) {
@@ -174,24 +174,24 @@ class LinkedList{
 const  Linkedlist = new LinkedList()
 Linkedlist.append(1)
 Linkedlist.append(2)
-Linkedlist.append(3)
-Linkedlist.append(4)
-Linkedlist.append(5)
-Linkedlist.append(6)
-Linkedlist.append(7)
-Linkedlist.append(8)
-Linkedlist.append(9)
-Linkedlist.append(9)
-Linkedlist.append(4)
 Linkedlist.append(1)
-Linkedlist.append(3)
+Linkedlist.append(4)
+Linkedlist.append(2)
+Linkedlist.append(6)
+// Linkedlist.append(7)
+// Linkedlist.append(8)
+// Linkedlist.append(9)
+// Linkedlist.append(9)
+// Linkedlist.append(4)
+// Linkedlist.append(1)
+// Linkedlist.append(3)
 
 
 
 // Linkedlist.print()
-// Linkedlist.removeduplicate()
+Linkedlist.removeduplicate()
 
-Linkedlist.Deletenode(1)
+// Linkedlist.Deletenode(1)
 Linkedlist.print()
 
 
