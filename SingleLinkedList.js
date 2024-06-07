@@ -152,6 +152,14 @@ class LinkedList{
         this.head = prev;
     }
  
+    //========================To convert an array to a linked list===============
+   
+        fromArray(arr) {
+            for (let val of arr) {
+                this.append(val);
+            }
+        }
+
     // =====================for printing the linkedlist================
     
     print(){
