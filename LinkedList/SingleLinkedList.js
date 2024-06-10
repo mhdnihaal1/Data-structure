@@ -109,7 +109,7 @@ class LinkedList{
         if (position === 0) {
             node.next = this.head;
             this.head = node;
-        } else {
+        }
             let pointer = this.head;
             let count = 0;
             while (count < position - 1) {
@@ -117,8 +117,8 @@ class LinkedList{
                 count++;
             }
             node.next = pointer.next;
-            pointer.next = node;
-        }
+            pointer.next= node
+        
         this.size++;
     }
 
@@ -129,7 +129,7 @@ class LinkedList{
         let index = 0;
         while (pointer !== null) {
             if (pointer.value === val) {
-                return index;
+                return index    
             }
             pointer = pointer.next;
             index++;
@@ -144,9 +144,9 @@ class LinkedList{
         let prev = null;
         let current = this.head;
         while (current !== null) {
-            let next = current.next;  // Store next node
-            current.next = prev;      // Reverse current node's pointer
-            prev = current;           // Move pointers one position ahead
+            let next = current.next;  
+            current.next = prev;      
+            prev = current;           
             current = next;
         }
         this.head = prev;
@@ -169,6 +169,32 @@ class LinkedList{
             pointer = pointer.next;
         }
     }
+
+    //=======================remove nth from last (little complicated but easy) ===================
+
+      removeNth(n) {
+ 
+        if(n > this.size){
+            console.log('invalid number')
+            return
+        }
+
+    const node = new Node(0);
+    node.next = this.head;
+    let fast = node;
+    let slow = node;
+    for (let i = 0; i <= n; i++) {
+      fast = fast.next;
+    }
+    while (fast) {
+      fast = fast.next;
+      slow = slow.next;
+    }
+
+    slow.next = slow.next.next;
+    console.log(node.next) 
+   }
+
 }
 
 const  Linkedlist = new LinkedList()
@@ -185,12 +211,13 @@ Linkedlist.append(6)
 // Linkedlist.append(4)
 // Linkedlist.append(1)
 // Linkedlist.append(3)
-
-
+// 
+// Linkedlist.search(6)
+// Linkedlist.insertAtPosition(10,4)
 
 // Linkedlist.print()
-Linkedlist.removeduplicate()
-
+// Linkedlist.removeduplicate()
+// Linkedlist.removeNth(4)
 // Linkedlist.Deletenode(1)
 Linkedlist.print()
 
