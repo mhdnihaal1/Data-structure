@@ -71,60 +71,66 @@
 // const testString2 = "hello";
 // console.log(isPalindrome(testString2)); 
 
-//=================================recursive inary search===================
 
-// function recursiveBinerySearch(arr, target) {
-//     return search(arr, target, 0, arr.length - 1);
-//   }
-  
-//   function search(arr, target, leftIndex, rightIndex) {
-//     if (leftIndex > rightIndex) {
-//       return -1;
+//=================================recursive Binary search===================
+
+// function first(arr,target){
+//     function second(left,right){
+//       if(left > right){
+//         return -1
+//       }
+//       const middle = Math.floor((left + right)/2)
+
+//       if(target == arr[middle]){
+//         return middle
+//       }
+
+//       if(target < arr[middle]){
+//         return second(left,middle -1)
+//       }else{
+//         return second(middle +1,right)
+//       }
 //     }
-  
-//     let middelIndex = Math.floor((leftIndex + rightIndex) / 2);
-//     if (target === arr[middelIndex]) {
-//       return middelIndex;
-//     }
-  
-//     if (target < arr[middelIndex]) {
-//       return search(arr, target, leftIndex, middelIndex - 1);
-//     } else {
-//       return search(arr, target, middelIndex + 1, rightIndex);
-//     }
-//   }
-//   console.log(recursiveBinerySearch([-5, 2, 4, 6, 10], 10));//4
-//   console.log(recursiveBinerySearch([-5, 2, 4, 6, 10], 6));//3
-//   console.log(recursiveBinerySearch([-5, 2, 4, 6, 10], 7));//-1
-
-//=================================(2)recursive inary search===================
-
-// function binarySearch(arr, target) {
-//     function search(leftIndex, rightIndex) {
-//         if (leftIndex > rightIndex) {
-//             return -1;
-//         }
-
-//         let middleIndex = Math.floor((leftIndex + rightIndex) / 2);
-
-//         if (arr[middleIndex] === target) {
-//             return middleIndex;
-//         }
-
-//         if (target < arr[middleIndex]) {
-//             return search(leftIndex, middleIndex - 1);
-//         } else {
-//             return search(middleIndex + 1, rightIndex);
-//         }
-//     }
-
-//     return search(0, arr.length - 1);
+//     return second(0,arr.length-1)
 // }
 
-// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-// const target = 7;
-// const index = binarySearch(arr,target);
 
-// console.log(index);
+// const ar = [1,2,3,4,5,6,7,8,9]
+// const target = 4;
+// const fir = first(ar,target)
+// console.log(fir)
 
-//========================================================================
+//================================ Recursive LinearSearch========================================
+
+// function recursiveLinearSearch(arr, target, index = 0) {
+//     if (index >= arr.length) {
+//         return -1; 
+//     }
+
+//     if (arr[index] === target) {
+//         return index; 
+//     }
+//     return recursiveLinearSearch(arr, target, index + 1);
+// }
+
+// const array = [10, 20, 30, 40, 50];
+// const target = 30;
+
+// console.log(recursiveLinearSearch(array, target)); 
+
+//======================================== Count Digits ===================================================
+
+// function countDigits(n) {
+//     if (n < 10) {
+//         return 1;
+//     }
+//     return 1 + countDigits(Math.floor(n / 10));
+// }
+
+
+// console.log(countDigits(456))
+
+//===========================================================================================
+
+
+

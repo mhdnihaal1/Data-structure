@@ -137,7 +137,7 @@ class LinkedList{
         return 'Value not found';
     }
 
-    //=========================for reverse the value  ===================== 
+    //========================= for reverse the value  ===================== 
 
 
     reverse() {
@@ -179,20 +179,22 @@ class LinkedList{
             return
         }
 
+
     const node = new Node(0);
     node.next = this.head;
     let fast = node;
     let slow = node;
-    for (let i = 0; i <= n; i++) {
+    for (let i = 0; i <= n; i++) { 
       fast = fast.next;
     }
-    while (fast) {
+    while (fast !== null) {
       fast = fast.next;
       slow = slow.next;
     }
 
     slow.next = slow.next.next;
-    console.log(node.next) 
+    this.head = node.next;
+    this.size--
    }
 
 }
@@ -200,9 +202,9 @@ class LinkedList{
 const  Linkedlist = new LinkedList()
 Linkedlist.append(1)
 Linkedlist.append(2)
-Linkedlist.append(1)
+Linkedlist.append(3)
 Linkedlist.append(4)
-Linkedlist.append(2)
+Linkedlist.append(5)
 Linkedlist.append(6)
 // Linkedlist.append(7)
 // Linkedlist.append(8)
@@ -217,7 +219,7 @@ Linkedlist.append(6)
 
 // Linkedlist.print()
 // Linkedlist.removeduplicate()
-// Linkedlist.removeNth(4)
+Linkedlist.removeNth(1)
 // Linkedlist.Deletenode(1)
 Linkedlist.print()
 
