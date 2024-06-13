@@ -31,7 +31,7 @@ class LinkedList{
             node.next = this.head;
             this.head=node;
         }
-         this.size++
+         this.size++;
     }
 
     //========================To append(last) the  linkedlist===============
@@ -161,7 +161,7 @@ class LinkedList{
             }
         }
 
-    // =====================for printing the linkedlist================
+    // =====================for printing the linkedlist=======================
     
     print(){
         let pointer = this.head;
@@ -171,30 +171,31 @@ class LinkedList{
         }
     }
 
-    //=======================remove nth from last (little complicated but easy) ===================
+    //=======================remove nth from last (little complicated but easy) =====================
 
       removeNth(n) {
  
-        if(n > this.size){
-            console.log('invalid number')
-            return
-        }
+      if(n>this.size){
+        return 'value not found'
+      }
 
-    const node = new Node(0);
-    node.next = this.head;
-    let fast = node;
-    let slow = node;
-    for (let i = 0; i <= n; i++) { 
-      fast = fast.next;
-    }
-    while (fast !== null) {
-      fast = fast.next;
-      slow = slow.next;
-    }
+      let node= new Node()
+      node.next=this.head
+      let fast =node 
+      let slow =node
+      for(let i=0;i<=n;i++){
+        fast= fast.next
+      }
 
-    slow.next = slow.next.next;
-    this.head = node.next;
-    this.size--
+      while(fast !== null){
+        fast =fast.next;
+        slow =slow.next
+      }
+     
+      slow.next=slow.next.next;
+      this.head=node.next;
+      this.size--
+
    }
 
 }
@@ -214,6 +215,7 @@ const  Linkedlist = new LinkedList()
 // Linkedlist.append(1)
 // Linkedlist.append(3)
 // 
+
 // Linkedlist.search(6)
 // Linkedlist.insertAtPosition(10,4)
 

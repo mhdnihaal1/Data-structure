@@ -22,13 +22,13 @@
 // console.log(flattenedArray);
 
 
-//==================================sum of all numbers=========================
+//================================== sum of all numbers =========================
 
 // function sumArray(arr) {
 //     if (arr.length === 0) {
 //         return 0;
 //     }
-    
+
 //     return arr[0] + sumArray(arr.slice(1));
 // }
 
@@ -37,7 +37,6 @@
 // console.log(result);
 
 //==================================string reverse==========================
-
 
 
 // function reverseString(str) {
@@ -112,10 +111,8 @@
 //     }
 //     return recursiveLinearSearch(arr, target, index + 1);
 // }
-
 // const array = [10, 20, 30, 40, 50];
 // const target = 30;
-
 // console.log(recursiveLinearSearch(array, target)); 
 
 //======================================== Count Digits ===================================================
@@ -126,8 +123,6 @@
 //     }
 //     return 1 + countDigits(Math.floor(n / 10));
 // }
-
-
 // console.log(countDigits(456))
 
 //======================================================================================
