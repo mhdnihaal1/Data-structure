@@ -12,29 +12,36 @@ class Node{
       this.tail = null
       this.size = 0
     }
+
+    isEmpty(){
+      return this.head == null
+  }
+
+  size(){
+      return this.size
+  }
   
-   append(value){
-    const newNode = new Node(value)
-    if(!this.head){
-      this.head = newNode
-      this.tail = newNode
+  append(value){
+    let node =new Node(value)
+    if(this.isEmpty()){
+      this.head=node;
+      this.tail=node
     }else{
-      this.tail.next = newNode
-      newNode.prev = this.tail
-      this.tail = newNode
+      this.tail.next=node;
+      node.prev=this.tail;
+      this.tail=node
     }
-    this.size++
-   }
+  }
   
    prepend(value){
-    const newNode = new Node(value)
-    if(!this.head){
-      this.head = newNode
-      this.tail = newNode
+    const node = new Node(value)
+    if(this.isEmpty()){
+      this.head = node
+      this.tail = node
     }else{
-      this.head.prev = newNode
-      newNode.next = this.head
-      this.head = newNode
+      this.head.prev = node
+      node.next = this.head
+      this.head = node
     }
     this.size++
    }
@@ -55,38 +62,38 @@ class Node{
     }
    }
   
-   insertAt(index , value ){
-    if(index < 0 || index > this.size){
-      return 'enter a valid index'
-    }
-    if(index === 0 ){
-      this.prepend(value)
-    }else if(index === this.size ){
-      this.append(value)
-    }else{
-      let prevInd = this.head
-      for(let i = 0 ; i < index - 1 ; i++){
-        prevInd = prevInd.next
-      }
-      const newNode = new Node(value)
-      newNode.next = prevInd.next
-      prevInd.next.prev = newNode
-      prev.next = newNode
-      newNode.prev = prevInd
+  //  insertAt(index , value ){
+  //   if(index < 0 || index > this.size){
+  //     return 'enter a valid index'
+  //   }
+  //   if(index === 0 ){
+  //     this.prepend(value)
+  //   }else if(index === this.size ){  m
+  //     this.append(value)
+  //   }else{
+  //     let prevInd = this.head
+  //     for(let i = 0 ; i < index - 1 ; i++){
+  //       prevInd = prevInd.next
+  //     }
+  //     const newNode = new Node(value)
+  //     newNode.next = prevInd.next
+  //     prevInd.next.prev = newNode
+  //     prev.next = newNode
+  //     newNode.prev = prevInd
       
-    }
-   }
+  //   }
+  //  }
   }
   
   
-    const newDLL = new doublyLinkedList()
-    newDLL.append(99)
-    newDLL.append(22)
-    newDLL.append(45)
-    newDLL.prepend('prepended 33')
+    const DLL = new doublyLinkedList()
+    DLL.append(99)
+    DLL.append(22)
+    DLL.append(45)
+    // DLL.prepend('prepended 33')
   
-    newDLL.insertAt(2,100)
-    newDLL.insertAt(2,11)
+    // DLL.insertAt(2,100)
+    // DLL.insertAt(2,11)
   
-    newDLL.printForward()
-  newDLL.printBackward()
+    DLL.printForward()
+    // DLL.printBackward()

@@ -97,7 +97,7 @@ class LinkedList{
        console.log('No value found')
     }
 
-    // ======================for inserting the nodes===============
+    // ======================for inserting the nodes at position ===============
 
     insertAtPosition(val, position) {
         if (position < 0 || position > this.size) {
@@ -109,6 +109,7 @@ class LinkedList{
         if (position === 0) {
             node.next = this.head;
             this.head = node;
+            return
         }
             let pointer = this.head;
             let count = 0;
@@ -179,7 +180,6 @@ class LinkedList{
             return
         }
 
-
     const node = new Node(0);
     node.next = this.head;
     let fast = node;
@@ -200,12 +200,12 @@ class LinkedList{
 }
 
 const  Linkedlist = new LinkedList()
-Linkedlist.append(1)
-Linkedlist.append(2)
-Linkedlist.append(3)
-Linkedlist.append(4)
-Linkedlist.append(5)
-Linkedlist.append(6)
+// Linkedlist.append(1)
+// Linkedlist.append(2)
+// Linkedlist.append(3)
+// Linkedlist.append(4)
+// Linkedlist.append(5)
+// Linkedlist.append(6)
 // Linkedlist.append(7)
 // Linkedlist.append(8)
 // Linkedlist.append(9)
@@ -219,7 +219,8 @@ Linkedlist.append(6)
 
 // Linkedlist.print()
 // Linkedlist.removeduplicate()
-Linkedlist.removeNth(1)
+// Linkedlist.removeNth(1)
+// Linkedlist.fromArray([1,2,3,4,5])
 // Linkedlist.Deletenode(1)
 Linkedlist.print()
 

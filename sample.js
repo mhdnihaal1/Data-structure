@@ -1,111 +1,37 @@
-class Node{
-    constructor(value){
-        this.value=value;
-        this.next=null
-    }
-}
-
-class LinkedList{
-
-    constructor(){
-        this.head=null;
-        this.size=0
-    }
-
-    isEmpty(){
-        return this.head == null;
-    }
-
-    size(){
-        return this.size;
-    }
-
-    append(val){
-        let node = new Node(val);
-        if(this.isEmpty()){
-            this.head=node;
-        }else{
-        let pointer= this.head;
-        while(pointer.next !== null){
-           pointer= pointer.next
-        }
-        pointer.next = node;
-    }
-    this.size++
-  }
-
-  prepend(val){
-    let node = new Node(val)
-    if(this.isEmpty()){
-        this.head=node
-    }else{
-        node.next=this.head;
-        this.head=node
-    }
-    this.size++
-  } 
-
-   print(){
-    let pointer = this.head;
-    while(pointer !== null){
-        console.log(pointer.value)
-        pointer= pointer.next
-    }
-   }
-
-   removeduplicate(){
-    let slow = this.head;
-    while(slow.next !== null){
-        let fast = slow;
-        while(fast.next !== null){
-            if(slow.value == fast.next.value){
-                fast.next = fast.next.next
-                this.size--
-            }
-         fast= fast.next
-        }
-        slow= slow.next
-    }
-
-   }
-
-   delete(val){
-    if(this.isEmpty){
-        return 'linkedlist is empty'
-    }
-
-    if(this.head.value ==val){
-        this.head = this.head.next;
-        this.size--
-        return
-    }
-
-    let pointer = this.head;
-    while(pointer !== null){
-        if(pointer.value == val){
-            pointer.next=pointer.next.next;
-            this.size--
-        }
-        pointer = pointer.next
-        return
-    }
-    console.log('no value found')
-   }
+// console.log('===================-----------Welcome to data structure-----------====================')
+    //=======================To prepend(first) the nodes in linkedlist===========
+    //========================To append(last) the  linkedlist===============
+     //========================To remove duplicates from  the  linkedlist===============
+    //========================for delete the linkedlist==============
+    // ======================for inserting the nodes at position ===============
+    //======================for searching  the value=================
+    //========================= for reverse the value  ===================== 
+    //========================To convert an array to a linked list===============
+    // =====================for printing the linkedlist================
+    //=======================remove nth from last (little complicated but easy) ===================
 
 
-   insertat(){
+// function recursivesum(arr){
+//       if(arr.length==0){
+//         return 0
+//       }
+//      return arr[0]+recursivesum(arr.slice(1))
+// }
 
-   }
+// function reverse(str){
+//     if(str.length <= 1){
+//         return str
+//     }
+//     return str[str.length-1] + reverse(str.slice(0,-1))
+// }
 
-}
-const  Linkedlist = new LinkedList()
+// function palindrome(str){
+//     if(str.length <= 1){
+//         return true
+//     }
+//     if(str[0] !== str[str.lenght-1]){
+//         return false
+//     }
+//     return palindrome(str.slice(1,-1))
+// }
 
-Linkedlist.append(1)
-Linkedlist.append(2)
-Linkedlist.append(3)
-Linkedlist.prepend(4)
-Linkedlist.prepend(5)
-
-// Linkedlist.removeduplicate()
-
-Linkedlist.print()
