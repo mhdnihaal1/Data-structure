@@ -24,17 +24,14 @@ class Stack {
         return this.items[this.items.length - 1];
     }
 
-    // Check if the stack is empty
     isEmpty() {
         return this.items.length == 0;
     }
 
-    // Return the number of elements in the stack
     size() {
         return this.items.length;
     }
 
-    // Print the stack
     printStack() {
         let str = "";
         for (let i = 0; i < this.items.length; i++) {
@@ -44,9 +41,8 @@ class Stack {
     }
 }
 
-// Example usage:
 let stack = new Stack();
-console.log(stack.isEmpty()); // true
+console.log(stack.isEmpty()); 
 stack.push(10);
 stack.push(20);
 stack.push(30);
