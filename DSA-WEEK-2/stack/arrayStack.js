@@ -7,7 +7,6 @@ class Stack {
         this.items.push(element);
     }
 
-    // Remove and return the top element from the stack
     pop() {
         if (this.isEmpty()) {
             return "Underflow";
@@ -15,7 +14,6 @@ class Stack {
         return this.items.pop();
     }
 
-    // Return the top element without removing it
     peek() {
         if (this.isEmpty()) {
             return "No elements in Stack";
@@ -45,7 +43,7 @@ console.log(stack.isEmpty());
 stack.push(10);
 stack.push(20);
 stack.push(30);
-console.log(stack.size()); // 3
-console.log(stack.peek()); // 30
-console.log(stack.pop()); // 30
-console.log(stack.printStack()); // 10 20
+console.log(stack.size());
+console.log(stack.peek());
+console.log(stack.pop());
+console.log(stack.printStack());
