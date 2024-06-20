@@ -12,3 +12,5 @@ function selectionSort(arr) {
     }
     return arr;
 }
+//logic
+//iterte through all element and check which is small and swap it to the first index

@@ -3,7 +3,6 @@ class Stack {
         this.items = [];
     }
 
-    // Add an element to the top of the stack
     push(element) {
         this.items.push(element);
     }

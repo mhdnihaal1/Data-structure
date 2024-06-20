@@ -10,3 +10,5 @@ function insertionSort(arr) {
     }
     return arr;
 }
+//logic
+// start from index 1 and check to the adjacent elements on second loop until it reach its position

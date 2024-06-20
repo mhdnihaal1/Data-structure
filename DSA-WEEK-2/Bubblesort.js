@@ -13,3 +13,5 @@ function bubbleSort(arr) {
     } while (swapped);
     return arr;
 }
+//logic
+//swap each adjacent element until it get sorted
