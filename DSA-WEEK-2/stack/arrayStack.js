@@ -29,6 +29,35 @@ class Stack {
         return this.items.length;
     }
 
+//============================delete specific node from the stack=====================
+
+    delete(value) {
+        const tempStack = new Stack();
+        let found = false;
+
+        while (!this.isEmpty()) {
+            const poppedValue = this.pop();
+            if (poppedValue === value) {
+                found = true;
+                break;
+            } else {
+                tempStack.push(poppedValue);
+            }
+        }
+
+        while (!tempStack.isEmpty()) {
+            this.push(tempStack.pop());
+        }
+
+        if (!found) {
+            console.log(`Value ${value} not found in the stack.`);
+        }
+    }
+
+    //===========================================
+
+    
+
     printStack() {
         let str = "";
         for (let i = 0; i < this.items.length; i++) {
@@ -47,3 +76,21 @@ console.log(stack.size());
 console.log(stack.peek());
 console.log(stack.pop());
 console.log(stack.printStack());
+
+
+//======================reverse the String Using Stack =========================
+
+function reverseStringUsingStack(str) {
+    const stack = new Stack();
+
+    for (let char of str) {
+        stack.push(char);
+    }
+
+    let reversedStr = '';
+    while (!stack.isEmpty()) {
+        reversedStr += stack.pop();
+    }
+
+    return reversedStr;
+}

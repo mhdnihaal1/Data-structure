@@ -16,5 +16,7 @@ function quickSort(arr) {
     }
     return quickSort(left).concat(pivot, quickSort(right));
 }
-//logic
-//
+
+let arr = [3,5,1,6,7,2,5,8,4,9]
+let fun = quickSort(arr)
+console.log(fun)

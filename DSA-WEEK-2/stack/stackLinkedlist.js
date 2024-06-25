@@ -16,7 +16,7 @@ class Node{
       if(!this.top){
         this.top = newNode
       }else{
-        newNode.next = this.top
+        newNode.next = this.top   
         this.top = newNode
       }
       this.size++
@@ -35,7 +35,7 @@ class Node{
       return this.top.value
     }
     print(){
-      let output = ''
+      let output = '';
       let curr = this.top
       for(let i = 0 ; i < this.size ; i++){
         output += `${curr.value} `
@@ -53,3 +53,13 @@ class Node{
   stack.print()
   stack.pop()
   stack.print()
+
+  print(){
+    let output='';
+    let curr = this.top;
+    for(let i=0;i<this.size;i++){
+      output += `${curr.value}`
+      curr=curr.next
+    }
+    console.log(output)
+  }
