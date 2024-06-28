@@ -2,9 +2,9 @@ function mergeSort(arr) {
     if (arr.length <= 1) {
         return arr;
     }
-    const mid = Math.floor(arr.length / 2);
-    const left = arr.slice(0, mid);
-    const right = arr.slice(mid);
+    let mid = Math.floor(arr.length / 2);
+    let left = arr.slice(0, mid);
+    let right = arr.slice(mid);
     return merge(mergeSort(left), mergeSort(right));
 }
 
@@ -25,4 +25,8 @@ function merge(left, right) {
 }
 
 
+
+let arr = [3,5,1,6,7,2,5,8,4,9]
+let fun = mergeSort(arr)
+console.log(fun)
 

@@ -1,8 +1,8 @@
 class hash{
 
-constructor(key){
-    this.table = new Array(key)
-    this.size=0
+constructor(size){
+    this.table = new Array(size)
+    this.size=size
 }
 
 
@@ -20,10 +20,7 @@ let index = this.hash(key)
 this.table[index]=value
 }
 
-get(key){
-    let 
 
-}
 
 
 

@@ -35,7 +35,7 @@ class Stack {
         const tempStack = new Stack();
         let found = false;
 
-        while (!this.isEmpty()) {
+        while (!this.isEmpty()) { 
             const poppedValue = this.pop();
             if (poppedValue === value) {
                 found = true;

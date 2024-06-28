@@ -48,7 +48,7 @@ class Node{
   queue.enqueue(444)
   
   queue.print()
-  queue.dequeue()
+  // queue.dequeue()
   
   queue.print()
 

@@ -54,12 +54,4 @@ class Node{
   stack.pop()
   stack.print()
 
-  print(){
-    let output='';
-    let curr = this.top;
-    for(let i=0;i<this.size;i++){
-      output += `${curr.value}`
-      curr=curr.next
-    }
-    console.log(output)
-  }
+
