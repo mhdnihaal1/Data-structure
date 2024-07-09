@@ -1,16 +1,17 @@
+//9
 class Heap{
     constructor(){
       this.data = []
     }
   
     getParentIndex(i){
-      return Math.floor(i-1/2)
+      return Math.floor(i-1/2);
     }
   
     getLeftChild(i){
       return i * 2 +1
     }
-  
+
     getRightChild(i){
       return i * 2 + 2
     }
@@ -21,7 +22,6 @@ class Heap{
       this.data[i2] = temp
     }
   
-  
     push(key){
       this.data[this.data.length] = key
       this.heapifyUp()
@@ -31,7 +31,6 @@ class Heap{
       let currIndex = this.data.length - 1
       while(this.data[currIndex] > this.data[this.getParentIndex(currIndex)]){
         this.swap(currIndex , this.getParentIndex(currIndex))
-  
         currIndex = this.getParentIndex(currIndex)
       }
     }
@@ -48,7 +47,7 @@ class Heap{
     heapifyDown(){
       let currIndex = 0
     
-        while(this.data[this.getLeftChild(currIndex)] !== undefined){
+        while(this.data[this.getLeftChild(currIndex)] !== undefined){ 
           let biggestIndex = this.getLeftChild(currIndex)
   
           if( this.data[this.getRightChild(currIndex)]  &&
@@ -67,17 +66,7 @@ class Heap{
       }
   
   
-      heapSort(array){
-        const heap = new Heap()
-        for(let i = 0 ; i < array.length ; i++){
-          heap.push(array[i])
-        }
-        let sortedArr = [] 
-        while(heap.data.length > 0){
-          console.log(sortedArr.push(heap.poll()));
-        }
-        return sortedArr
-      }
+    
   
   
   }
@@ -88,9 +77,11 @@ class Heap{
   // heap.push(90)
   
   
-  // console.log(heap.poll());
-  // console.log(heap.poll());
+  // console.log(heap.poll())
+  // console.log(heap.poll())
   
   // console.log(heap);
   
   console.log(heap.heapSort([1,2000,55,623]));
+
+ 

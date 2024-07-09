@@ -1,4 +1,5 @@
-class min_Heap{
+//9
+class Heap{
     constructor(){
       this.data = []
     }
@@ -25,12 +26,13 @@ class min_Heap{
     }
   
     heapifyUp(){
-      let currentIndex = this.data.length - 1
-      while(this.data[currentIndex] < this.data[this.getParentIndex(currentIndex)]){
-        this.swap(currentIndex , this.getParentIndex(currentIndex))
-        currentIndex = this.getParentIndex(currentIndex)
+      let currIndex = this.data.length - 1
+      while(this.data[currIndex] < this.data[this.getParentIndex(currIndex)]){
+        this.swap(currIndex , this.getParentIndex(currIndex))
+        currIndex = this.getParentIndex(currIndex)
       }
     }
+    
   
     poll(){
       let minValue =  this.data[0]
@@ -44,6 +46,7 @@ class min_Heap{
       let currIndex = 0
       while(this.data[this.getLeftChildIndex(currIndex)] != undefined){
         let smallestIndex = this.getLeftChildIndex(currIndex)
+      
         if( this.data[this.getRightChildIndex(currIndex)] && 
         this.data[this.getRightChildIndex(currIndex)] < this.data[this.getLeftChildIndex(currIndex)]  ){
           smallestIndex = this.data[this.getRightChildIndex(currIndex)]
@@ -59,7 +62,7 @@ class min_Heap{
   
   
     heapSort(array){
-      const heap = new min_Heap()
+      const heap = new Heap();
       for(let i = 0 ; i < array.length ; i++){
         heap.push(array[i])
       }
@@ -73,7 +76,7 @@ class min_Heap{
   }
   
   
-  const minHeap = new min_Heap()
+  const minHeap = new  Heap()
   // minHeap.push(25)
   // minHeap.push(5)
   // minHeap.push(40)

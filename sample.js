@@ -1,27 +1,27 @@
-class hash{
-
-constructor(size){
-    this.table = new Array(size)
-    this.size=size
-}
-
-
-hash(key){
-
-    let total=0;
-    for(let i=0;i<key.length;i++){
-        total += key.charCodeAt(i)
+class Node{
+    constructor(value){
+        this.value = value;
+        this.left=null;
+        this.right=null;
     }
-    return total % this.size
 }
+class bst{
+    constructor(){
+        this.root=null
+    }
 
-set(key,value){
-let index = this.hash(key)
-this.table[index]=value
-}
-
-
-
-
-
+    levelorder(){
+        let queue=[];
+        queue.push(this.root)
+        while(queue.length >0){
+            let current = queue.shift()
+            console.log(current.value)
+            if(current.left){
+                queue.push(current.left)
+            }
+            if(current.right){
+                queue.push(right.left)
+            }
+        }
+    }
 }
