@@ -44,7 +44,7 @@ class Node{
       return true
     }
   
-    autoComplete(prefix){
+    autoComplete(prefix){ 
       let curr = this.root
       for(let character of prefix){
         if(!curr.children[character]){

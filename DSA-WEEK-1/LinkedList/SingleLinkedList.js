@@ -16,12 +16,12 @@ class LinkedList{
     isEmpty(){
         return this.head == null
     }
-
+          
     size(){
         return this.size
     }
 
-    //=======================To prepend(first) the nodes in linkedlist===========
+    //==============================    To prepend(first) the nodes in linkedlist   ==============================
 
     prepend(val){
              let node =new Node(val)
@@ -34,7 +34,7 @@ class LinkedList{
          this.size++;
     }
 
-    //========================To append(last) the  linkedlist===============
+    //========================              To append(last) the  linkedlist       ============================
 
      append(val){
          let node = new Node(val)
@@ -50,7 +50,7 @@ class LinkedList{
          this.size++
      }
 
-         //========================To remove duplicates from  the  linkedlist===============
+ //========================To remove duplicates from  the  linkedlist===============
 
      removeduplicate() {
         let slow = this.head; 
@@ -70,7 +70,7 @@ class LinkedList{
     }
 
 
-    //========================for delete the linkedlist==============
+    //==========================   for delete the linkedlist  =========================
 
     Deletenode(val){
 
@@ -97,7 +97,7 @@ class LinkedList{
        console.log('No value found')
     }
 
-    // ======================for inserting the nodes at position ===============
+    // =========================   for inserting the nodes at position   ========================
 
     insertAtPosition(val, position) {
         if (position < 0 || position > this.size) {
@@ -119,11 +119,11 @@ class LinkedList{
             }
             node.next = pointer.next;
             pointer.next= node
-        
-        this.size++;
+            
+          this.size++;
     }
 
-    //======================for searching  the value=================
+    // ======================  for searching  the value  ======================
 
     search(val) {
         let pointer = this.head;
@@ -138,7 +138,7 @@ class LinkedList{
         return 'Value not found';
     }
 
-    //========================= for reverse the value  ===================== 
+    //========================= for reverse the value  =========================
 
 
     reverse() {

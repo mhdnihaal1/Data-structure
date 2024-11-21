@@ -16,6 +16,7 @@
 //     return -1
 // }
 
-// console.log(BinarySearch([1,2,3,4,5,6,7],3));
-// console.log(BinarySearch([1,2,3,4,5,6,7],7));
-// console.log(BinarySearch([1,2,3,4,5,6,7],1));
+// console.log(BinarySearch([1,2,3,4,5,6,7],3)); 
+// console.log(BinarySearch([1,2,3,4,5,6,7],7)); 
+// console.log(BinarySearch([1,2,3,4,5,6,7],1)); 
+

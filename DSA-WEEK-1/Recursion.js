@@ -47,11 +47,17 @@
 //     return str[str.length - 1] + reverseString(str.slice(0,-1));
 // }
 
+
+// function reverseName(name) {
+//     if (name === "") return "";
+//     return reverseName(name.slice(1)) + name[0];
+//   }
+
 // const originalString = "Hello, World!";
 // const reversedString = reverseString(originalString);
 // console.log(reversedString); 
 
-//======================================cheking array is a palindrome=====================================
+//======================================checking array is a palindrome=====================================
 
 // function isPalindrome(str) {
 //     if (str.length <= 1) {
@@ -123,6 +129,6 @@
 //     }
 //     return 1 + countDigits(Math.floor(n / 10));
 // }
-// console.log(countDigits(456))
+// console.log(countDigits(45456)) // 5
 
 //======================================================================================
